@@ -37,6 +37,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import uz.kotlinjon.todoapp.R
 import uz.kotlinjon.todoapp.common.MyAlertDialog
+import uz.kotlinjon.todoapp.common.MyDialog
 import uz.kotlinjon.todoapp.model.TaskModel
 
 typealias color = R.color
@@ -47,12 +48,10 @@ fun Home(modifier: Modifier) {
     val viewMode: HomeVMC = viewModel<HomeViewModel>()
     val events = viewMode.getEvent().collectAsState()
     viewMode.getAllTaskFromData()
-
-
-
+    
     when (events.value) {
         is UiEvents.Error -> {
-
+            
         }
 
         UiEvents.Loading -> {
@@ -104,12 +103,20 @@ fun TaskItemView(
 ) {
     var showDialog by remember { mutableStateOf(false) }
 
-    MyAlertDialog(showDialog = showDialog, model) {
-        it?.let {
-            deleteItem.invoke(it)
-        }
-        showDialog = false
+//    MyAlertDialog(showDialog = showDialog, model) {
+//        it?.let {
+//            deleteItem.invoke(it)
+//        }
+//        showDialog = false
+//    }
+    
+    MyDialog(showDialog = showDialog) {
+        
     }
+    
+    
+    
+    
     Box(
         modifier = modifier
             .fillMaxWidth()
