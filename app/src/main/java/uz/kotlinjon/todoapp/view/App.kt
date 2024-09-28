@@ -1,15 +1,11 @@
-package uz.kotlinjon.todoapp.view.home
+package uz.kotlinjon.todoapp.view
 
 import android.annotation.SuppressLint
 import android.app.Application
 import androidx.room.Room
-import kotlinx.coroutines.InternalCoroutinesApi
-import kotlinx.coroutines.internal.synchronized
 import uz.kotlinjon.todoapp.model.db.AppDataBase
 
 const val TABLE = "table_name"
-
-
 
 class App : Application() {
 

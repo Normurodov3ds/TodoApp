@@ -2,7 +2,7 @@ package uz.kotlinjon.todoapp.model.repository.add
 
 import uz.kotlinjon.todoapp.model.TaskModel
 import uz.kotlinjon.todoapp.model.toEntity
-import uz.kotlinjon.todoapp.view.home.App
+import uz.kotlinjon.todoapp.view.App
 
 class AddTaskRepositoryImp : AddTaskRepository {
 

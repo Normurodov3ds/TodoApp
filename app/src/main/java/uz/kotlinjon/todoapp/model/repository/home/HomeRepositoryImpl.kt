@@ -2,7 +2,7 @@ package uz.kotlinjon.todoapp.model.repository.home
 
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
-import uz.kotlinjon.todoapp.view.home.App
+import uz.kotlinjon.todoapp.view.App
 import uz.kotlinjon.todoapp.model.TaskModel
 import uz.kotlinjon.todoapp.model.toTaskModel
 
